@@ -3,6 +3,7 @@ type User = {
   age: number | string;
 };
 type evetLoop = 'lesson' | 'gad';
+type size = 'small' | 'medium' | 'large';
 // const button = document.querySelector("button")! as HTMLButtonElement;
 // const input1 = document.getElementById("number1")! as HTMLInputElement;
 // const input2 = document.getElementById("number2")! as HTMLInputElement;
@@ -38,8 +39,75 @@ type evetLoop = 'lesson' | 'gad';
 // name = 12;
 // name.toFixed();
 
-enum Sizes {
-  small = 'small',
-  large = 'large',
-  medium = 'medium',
-}
+// enum Sizes {
+//   small = 'small',
+//   medium = 'medium',
+//   large = 'large',
+// }
+// const button: size = 'large';
+
+// const button2: Sizes = Sizes.large;
+
+// function add(num1: number, num2: number): string {
+//   return `${num1}` + `${num2}`;
+// }
+
+// console.log(add(2, 3));
+
+// function add(num1: number, num2: number): void {
+//   console.log(num1 + num2);
+// }
+// add(2, 3);
+// type User2 = {
+//   name: string;
+// };
+
+// function great(user: User2): void {
+//   console.log(`Hello ${user.name}`);
+// }
+
+// type User3 = {
+//   name: string;
+//   age: number;
+//   hoby: string;
+// };
+
+// function userConstructor(name: string, age: number, hoby: string): User3 {
+//   return {
+//     name,
+//     age,
+//     hoby,
+//   };
+// }
+
+// type Car = {
+//   color: string;
+//   price: number;
+//   currence: string;
+//   start: (color: string) => {};
+// };
+
+// const Car = {
+//   color: 'red',
+//   price: 300,
+//   currence: 'UAH',
+//   start(color:string) {
+//     console.log('Start' + this.color);
+//   },
+// };
+
+type User4 = {
+  name: string;
+  age: number;
+  role?: string;
+};
+
+const user: User4 = {
+  name: 'serh',
+  age: 10,
+};
+const admin: User4 = {
+  name: 'anton',
+  age: 12,
+  role: 'admin',
+};
