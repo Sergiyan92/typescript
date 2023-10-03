@@ -4,26 +4,26 @@ type User = {
 };
 type evetLoop = 'lesson' | 'gad';
 type size = 'small' | 'medium' | 'large';
-// const button = document.querySelector("button")! as HTMLButtonElement;
-// const input1 = document.getElementById("number1")! as HTMLInputElement;
-// const input2 = document.getElementById("number2")! as HTMLInputElement;
+// const button = document.querySelector('button')! as HTMLButtonElement;
+// const input1 = document.getElementById('number1')! as HTMLInputElement;
+// const input2 = document.getElementById('number2')! as HTMLInputElement;
 
-// function add(number1:number, number2:number) {
+// function add(number1: number, number2: number) {
 //   return number1 + number2;
 // }
 
-// button.addEventListener("click", function() {
-//   console.log(add(+input1.value, +input2.value))
-// })
-// const total: number = 100
-// let empty: null = null
+// button.addEventListener('click', function () {
+//   console.log(add(+input1.value, +input2.value));
+// });
+// const total: number = 100;
+// let empty: null = null;
 
-// const numbers: number[] = [1,2,3,4, 5,6]
+// const numbers: number[] = [1, 2, 3, 4, 5, 6];
 
-// const user:{name:string, age:number} = {
-//     name: "Serhii",
-//     age:12
-// }
+// const user: { name: string; age: number } = {
+//   name: 'Serhii',
+//   age: 12,
+// };
 // const user: User = {
 //   name: 'serg',
 //   age: 12,
@@ -91,23 +91,80 @@ type size = 'small' | 'medium' | 'large';
 //   color: 'red',
 //   price: 300,
 //   currence: 'UAH',
-//   start(color:string) {
+//   start(color: string) {
 //     console.log('Start' + this.color);
 //   },
 // };
 
-type User4 = {
-  name: string;
-  age: number;
-  role?: string;
+// type User4 = {
+//   name: string;
+//   age: number;
+//   role?: string;
+// };
+
+// const user: User4 = {
+//   name: 'serh',
+//   age: 10,
+// };
+// const admin: User4 = {
+//   name: 'anton',
+//   age: 12,
+//   role: 'admin',
+// };
+
+// type Goods = {
+//   [key: string]: number;
+// };
+
+// const fruits: Goods = {
+//   apples: 15,
+//   banana: 10,
+//   orange: 3,
+// };
+
+// type MixedType = {
+//   [key: string]: string | number;
+// };
+
+// const userInfo: MixedType = {
+//   name: 'Bob',
+//   age: 10,
+//   country: 'Ukraine',
+// };
+
+// const bookDetails: MixedType = {
+//   tittle: 'Bible',
+//   pageCount: 350,
+// };
+
+// function reverse<K>(items: K[]): K[] {
+//   return items.reverse();
+// }
+
+// let numbers = reverse<number>([1, 2, 3, 4, 5]);
+// console.log(numbers);
+// let string = reverse<string>(['a', 'b', 'c', 'd']);
+// console.log(string);
+
+// function lengthOfObject<T extends { length: number }>(obj: T): number {
+//   return obj.length;
+// }
+
+// lengthOfObject({ name: 'Bary', length: 30 });
+
+const student = {
+  name: 'Bonya',
+  age: 12,
 };
 
-const user: User4 = {
-  name: 'serh',
-  age: 10,
-};
-const admin: User4 = {
-  name: 'anton',
-  age: 12,
-  role: 'admin',
-};
+function getProperty<ObjectType, KeyType extends keyof ObjectType>(
+  obj: ObjectType,
+  key: KeyType
+): ObjectType[KeyType] {
+  return obj[key];
+}
+let studentName = getProperty(student, 'name');
+console.log(studentName);
+
+let studentAddress = getProperty(student, 'address');
+console.log(studentAddress);
